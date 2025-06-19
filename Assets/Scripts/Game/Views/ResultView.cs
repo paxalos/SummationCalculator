@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
 
-public class ResultView : MonoBehaviour
+namespace Game
 {
-    [SerializeField] private TMP_Text resultLabel;
-
-    public void SetResultLabel(string result)
+    public class ResultView : MonoBehaviour
     {
-        resultLabel.text = result;
+        [SerializeField] private TMP_Text resultLabel;
+
+        public void SetResultLabel(string result)
+        {
+            resultLabel.text = result;
+        }
     }
 }

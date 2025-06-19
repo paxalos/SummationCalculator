@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Popups;
 using System;
 
-namespace Managers
+namespace Popups
 {
     public class PopupsManager : MonoBehaviour
     {
