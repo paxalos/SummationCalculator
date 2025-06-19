@@ -19,7 +19,7 @@ namespace Game
             this.resultsSaver = resultsSaver;
         }
 
-        public abstract void CalculateInput(string input);
+        public abstract bool CalculateInput(string input);
 
         public void SaveInput(string input)
         {

@@ -69,8 +69,9 @@ namespace Game
             string input = inputField.text;
             if (!string.IsNullOrEmpty(input))
             {
-                presenter.CalculateInput(input);
-                inputField.text = string.Empty;
+                bool isCalculated = presenter.CalculateInput(input);
+                if (isCalculated)
+                    inputField.text = string.Empty;
             }
         }
 

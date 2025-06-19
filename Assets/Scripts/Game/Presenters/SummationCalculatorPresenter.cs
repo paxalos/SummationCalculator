@@ -31,9 +31,10 @@ namespace Game
             }
         }
 
-        public override void CalculateInput(string input)
+        public override bool CalculateInput(string input)
         {
             string result = string.Empty;
+            bool isResultCalculated = true;
             // check that the input contains only numbers and plus
             // check that the input doesn't start and end with plus
             // check that the input doesn't have double plus
@@ -44,6 +45,7 @@ namespace Game
             {
                 popupsManager.ShowErrorMessage();
                 result = $"{input}=ERROR";
+                isResultCalculated = false;
             }
             else
             {
@@ -58,6 +60,8 @@ namespace Game
             bool asNew = model.CanAddResultAsNew;
             model.AddResult(result, asNew);
             resultsSaver.SaveResult(result, asNew);
+
+            return isResultCalculated;
         }
     }
 }
